@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Tý Tẹo Lớn Khôn Publisher</title>
+<meta name="description" content="How Tý Tẹo Lớn Khôn Publisher accesses, stores and deletes data from YouTube and Facebook.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --peach: #ef7d57;
+    --peach-dark: #c9603d;
+    --cream: #fff6e9;
+    --ink: #2b2a33;
+    --muted: #7b7686;
+    --line: #eedfcb;
+    --sun: #f8c545;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 400 17px/1.65 "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--peach-dark); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  header { background: var(--peach); color: #fff; }
+  header .wrap { padding-top: 28px; padding-bottom: 40px; }
+  .back { color: #fff; opacity: .9; font-weight: 500; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  h1 {
+    font: 800 clamp(36px, 7vw, 52px)/1.05 "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+    margin: 28px 0 8px;
+  }
+  .updated { margin: 0; opacity: .9; }
+
+  main { padding: 40px 0 24px; }
+  h2 {
+    font: 700 25px/1.2 "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+    margin: 40px 0 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  code { font-size: .92em; background: #fff; padding: 1px 5px; border: 1px solid var(--line); border-radius: 4px; }
+
+  .summary {
+    background: #fff;
+    border-left: 6px solid var(--sun);
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+  }
+  .summary p:last-child { margin-bottom: 0; }
+
+  .table-wrap { overflow-x: auto; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 16px; background: #fff; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--line); }
+  th { font-weight: 600; background: #fdebd9; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    margin-top: 48px;
+    padding: 24px 0 40px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  footer nav a { margin-right: 20px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="back" href="./">Tý Tẹo Lớn Khôn Publisher</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: October 30, 2026</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="summary">
+    <p>Tý Tẹo Lớn Khôn Publisher ("the tool", "we") is an internal tool operated by Tý Tẹo Lớn Khôn. It uploads the operator's own videos to the operator's own YouTube channel and Facebook Page. It is used only by the channel owner and does not collect data from the public.</p>
+  </div>
+
+  <h2>Use of YouTube API Services</h2>
+  <p>The tool uses the YouTube API Services to upload videos. By using the tool, you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's collection and use of data is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h2>Data we access, store and use</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Why</th><th>Where it is kept</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google OAuth refresh token with the <code>youtube.upload</code> scope</td>
+          <td>To upload videos to the channel owner's YouTube channel without signing in each time</td>
+          <td>Encrypted secret storage on the operator's own server. Never in source code or public repositories</td>
+        </tr>
+        <tr>
+          <td>Short-lived access tokens</td>
+          <td>To authorize each upload request</td>
+          <td>In memory only, discarded after use</td>
+        </tr>
+        <tr>
+          <td>Video files and metadata (title, description, tags, visibility)</td>
+          <td>To create the video on YouTube and Facebook</td>
+          <td>Provided by the operator; kept on the operator's server until the upload finishes</td>
+        </tr>
+        <tr>
+          <td>Uploaded video IDs</td>
+          <td>To keep a log of what has been published</td>
+          <td>Operator's server</td>
+        </tr>
+        <tr>
+          <td>Facebook Page access token</td>
+          <td>To publish posts and videos to the operator's own Facebook Page</td>
+          <td>Encrypted secret storage on the operator's own server</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The tool does not access or store YouTube comments, analytics, subscriber lists, watch history, or any information about other YouTube or Facebook users. It does not read the Google account's email, contacts or any data outside the permission listed above.</p>
+
+  <h2>How data is shared</h2>
+  <p>Data is sent only to Google (YouTube Data API) and Meta (Graph API) for the sole purpose of publishing the operator's videos. We do not sell, rent or share data with any other third party, and we do not use it for advertising.</p>
+  <p>The tool's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Cookies and device storage</h2>
+  <p>The tool has no public website features and places no cookies or tracking technologies on users' devices. During the one-time authorization, Google's sign-in page may use its own cookies, as described in the Google Privacy Policy.</p>
+
+  <h2>Revoking access</h2>
+  <p>The channel owner can revoke the tool's access to YouTube at any time on the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a>. Access to Facebook can be removed in Facebook Settings under Business Integrations. Once access is revoked, the stored token stops working and the tool can no longer upload anything.</p>
+
+  <h2>Data retention and deletion</h2>
+  <ul>
+    <li>Refresh tokens are kept until access is revoked or the tool is retired, then deleted from storage.</li>
+    <li>Temporary video files are deleted after the upload finishes.</li>
+    <li>Upload logs are kept for up to 12 months and then deleted.</li>
+  </ul>
+  <p>To request deletion of any stored data, email <a href="mailto:thanhtung.mobiledev@gmail.com">thanhtung.mobiledev@gmail.com</a>. We will delete it within 30 days. Videos already published stay on YouTube and Facebook and can be removed in YouTube Studio or on the Facebook Page.</p>
+
+  <h2>Security</h2>
+  <p>Tokens are stored encrypted, access to the server is limited to the operator, and all API traffic uses HTTPS.</p>
+
+  <h2>Children</h2>
+  <p>Although the channel's videos are made for children and their parents, the tool itself is not directed at children and is used only by the adult channel owner. It does not collect any data from viewers of the channel, whether children or adults.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted on this page with a new "Last updated" date.</p>
+
+  <h2>Contact</h2>
+  <p>Tý Tẹo Lớn Khôn<br>Email: <a href="mailto:thanhtung.mobiledev@gmail.com">thanhtung.mobiledev@gmail.com</a></p>
+
+  <footer>
+    <nav>
+      <a href="./">Home</a>
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+    </nav>
+    <p style="margin-top:16px">© 2026 Tý Tẹo Lớn Khôn</p>
+  </footer>
+</main>
+</body>
+</html>

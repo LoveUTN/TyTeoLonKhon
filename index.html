@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tý Tẹo Lớn Khôn Publisher</title>
+<meta name="description" content="Internal publishing tool that uploads Tý Tẹo Lớn Khôn's own videos to its own YouTube channel and Facebook Page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --peach: #ef7d57;
+    --peach-dark: #c9603d;
+    --cream: #fff6e9;
+    --ink: #2b2a33;
+    --muted: #7b7686;
+    --line: #eedfcb;
+    --sun: #f8c545;
+    --mint: #3bafa0;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 400 17px/1.6 "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--peach-dark); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+
+  header {
+    background: var(--peach);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Two soft circles as background decoration – the two characters */
+  header::before,
+  header::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  header::before {
+    right: 60px; top: -40px;
+    width: 220px; height: 220px;
+    background: rgba(248, 197, 69, .22);
+  }
+  header::after {
+    right: -30px; bottom: -70px;
+    width: 180px; height: 180px;
+    background: rgba(255, 255, 255, .14);
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .hero { padding: 72px 0 64px; position: relative; z-index: 1; }
+  .brand {
+    font: 700 15px/1 "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--sun);
+    margin: 0 0 40px;
+  }
+  h1 {
+    font: 800 clamp(32px, 6.5vw, 52px)/1.1 "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+    margin: 0 0 20px;
+    max-width: 16ch;
+  }
+  .lede { font-size: 19px; max-width: 34em; margin: 0; color: rgba(255, 255, 255, .92); }
+
+  main { padding: 56px 0 24px; }
+  h2 {
+    font: 700 28px/1.15 "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+    margin: 48px 0 12px;
+  }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 16px; max-width: 38em; }
+  ul { padding-left: 20px; margin: 0 0 16px; }
+  li { margin-bottom: 8px; }
+  code { font-size: .92em; background: #fff; padding: 1px 5px; border: 1px solid var(--line); border-radius: 4px; }
+
+  .flow {
+    list-style: none; padding: 0; margin: 20px 0 0;
+    border-left: 3px solid var(--peach);
+  }
+  .flow li { padding: 4px 0 14px 20px; position: relative; }
+  .flow li::before {
+    content: ""; position: absolute; left: -8px; top: 11px;
+    width: 13px; height: 13px; border-radius: 50%;
+    background: var(--cream); border: 3px solid var(--peach);
+  }
+  .flow strong { display: block; font-weight: 600; }
+
+  .note {
+    border-left: 6px solid var(--sun);
+    background: #fff;
+    padding: 16px 20px;
+    margin: 24px 0;
+    border-radius: 0 12px 12px 0;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    margin-top: 48px;
+    padding: 24px 0 40px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  footer nav a { margin-right: 20px; }
+
+  @media (max-width: 560px) {
+    header::before, header::after { display: none; }
+    .hero { padding: 48px 0 44px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <p class="brand">Tý Tẹo Lớn Khôn</p>
+    <h1>Tý Tẹo Lớn Khôn Publisher</h1>
+    <p class="lede">An internal tool that publishes Tý Tẹo Lớn Khôn's own educational videos for children and parents to its own YouTube channel and Facebook Page.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>What it does</h2>
+  <p>Tý Tẹo Lớn Khôn produces short animated videos that teach children aged 3 to 12, and their parents, about body awareness, personal boundaries and staying safe. This tool saves the team from uploading every video by hand: once a video is ready, the tool sends it, together with its title, description and visibility setting, to the channel's YouTube account and Facebook Page.</p>
+
+  <h2>Who uses it</h2>
+  <p>Only the owner of the Tý Tẹo Lớn Khôn channel. The tool has no public sign-up, no user accounts and no audience-facing features. It acts on a single YouTube channel and a single Facebook Page, both owned by the operator.</p>
+
+  <h2>How it uses the YouTube API Services</h2>
+  <p>The tool uses the YouTube Data API v3 for one purpose: uploading videos to the channel owner's own YouTube channel.</p>
+  <ol class="flow">
+    <li><strong>One-time authorization</strong>The channel owner signs in with Google and grants the <code>youtube.upload</code> permission.</li>
+    <li><strong>Upload</strong>The tool calls <code>videos.insert</code> with the video file and its metadata.</li>
+    <li><strong>Done</strong>The video appears on the channel. The tool reads no other channel data, comments, analytics or subscriber information.</li>
+  </ol>
+
+  <div class="note">
+    <p style="margin:0">By using this tool, the channel owner agrees to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>Read how authorization tokens and video metadata are handled in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this tool: <a href="mailto:thanhtung.mobiledev@gmail.com">thanhtung.mobiledev@gmail.com</a></p>
+
+  <footer>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+      <a href="mailto:thanhtung.mobiledev@gmail.com">Contact</a>
+    </nav>
+    <p style="margin-top:16px">© 2026 Tý Tẹo Lớn Khôn</p>
+  </footer>
+</main>
+</body>
+</html>
